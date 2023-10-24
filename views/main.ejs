@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+<main>
+<h1 class="main-title">Note It <i class="fa-solid fa-pen-nib"></i></h1>
+
+<a class="btn btn-dark btn-lg new-note-btn" href="/note" role="button">Add New Note +</a>
+<div class="new-notes">
+<% if (locals.notes) { %>
+    <% notes.forEach((note) => { %>
+        <div class="note">
+        
+        <p><%= note.noteBody%></p>
+        <div class="note-buttons">
+            <form action="/edit" method="post">
+        <button class="btn btn-dark" type="submit">Edit</button>
+            </form>
+            <form action="/delete" method="post">
+                <input type="hidden" name="itemId" value="<%= note._id %>">
+                <input type="hidden" name="userId" value="<%= note.userId %>">
+        <button class="btn btn-dark" type="submit">Delete</button>
+        
+        </form>
+    </div>
+    </div>
+    <% })%>
+<% } else { %>
+    <div class="note">
+        
+        <p>Example Note</p>
+        <div class="note-buttons">
+            <form action="/edit" method="post">
+                <button class="btn btn-dark" type="submit">Edit</button>
+                    </form>
+                    <form action="/delete" method="post">
+                <button class="btn btn-dark" type="submit">Delete</button>
+                </form>
+        </div>
+    </div>
+ <% } %>
+    
+    
+    
+</div>
+
+<div class="btn-container-main">
+    <a class="btn btn-dark btn-lg" href="/" role="button" class="home-btn">Home</a>
+    <a class="btn btn-dark btn-lg" href="/logout" role="button" class="home-btn">Log Out</a>
+  </div>
+
+
+<%- include('partials/footer') %>

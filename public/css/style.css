@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --red1-color: #F5543D;
+    --orange1-color: #F5753D;
+    --yellow1-color: #F5B13D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    background: linear-gradient(90deg, var(--red1-color), var(--orange1-color), var(--yellow1-color));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+i {
+    margin: 10px;
+    color: #000;
+}
+
+.btn-container {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%);
+    margin-top: 80px;
+}
+
+.btn {
+    margin: 8px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+form, .note {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    max-width: 300px;
+    position: relative;
+    
+    
+}
+
+.note {
+    min-height: 300px;
+    padding: 30px;
+    min-width: 300px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main-title {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.main-form {
+    margin-right: 20px;
+}
+
+.main-form button {
+    margin-top: 20px;
+}
+
+.underline {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.btn-container-main {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .new-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+} */
+
+.new-note-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 18%;
+    
+}
+
+.new-notes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

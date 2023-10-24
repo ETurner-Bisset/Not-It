@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<main>
+    <h1 class="main-title">Note It <i class="fa-solid fa-pen-nib"></i></h1>
+    
+    
+    
+    <form action="/note" method="post" class="new-note">
+        <h2>Add New Note</h2>
+        <hr class="underline">
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Subject</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noteBody"></textarea>
+        <button type="submit" class="btn btn-dark">Add +</button>
+      </div>
+    </form>
+
+    <div class="btn-container-main">
+        <a class="btn btn-dark btn-lg" href="/main" role="button" class="home-btn">Back</a>
+        <a class="btn btn-dark btn-lg" href="/logout" role="button" class="home-btn">Log Out</a>
+      </div>
+
+<%- include('partials/footer') %>
